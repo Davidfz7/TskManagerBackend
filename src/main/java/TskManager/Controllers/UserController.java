@@ -40,12 +40,7 @@ public class UserController {
         return userService.getUsers();
     }
     
-   @PostMapping("/postbody")
-   public String postBody(@RequestBody Users user){
-       userService.saveUser(user);
-       System.out.println("Hola");
-       return "Se entrego la data";
-   }
+
     
     
     
