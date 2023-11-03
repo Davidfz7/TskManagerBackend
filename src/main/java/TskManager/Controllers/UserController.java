@@ -8,7 +8,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import TskManager.Tables.Users;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.persistence.PostPersist;
+import java.io.IOException;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+
 //Esta anotacion indica que esto es un controlador en Django seria algo como la clase VIEWS
 @RestController
 //Esto indica que esta clase es una URL la cual
@@ -26,17 +34,18 @@ public class UserController {
      
      }
      
-    @GetMapping("/Users")//Aqui se indica el contenido a mostrar o devolver en esta direccion
+    @GetMapping("/users")//Aqui se indica el contenido a mostrar o devolver en esta direccion
     public List<Users> getUser(){
     
         return userService.getUsers();
     }
     
-    @GetMapping//Aqui se indica el contenido a mostrar o devolver en esta direccion
-    public void deleteUser(){
-    
-        return ;
-    }
+   @PostMapping("/postbody")
+   public String postBody(@RequestBody Users user){
+       userService.saveUser(user);
+       
+       return "Se entrego la data";
+   }
     
     
     

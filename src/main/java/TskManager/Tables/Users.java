@@ -24,10 +24,10 @@ public class Users implements Serializable {
     public Users() {
     }
 
-    public Users(String first_name, String last_name, String Birthday, String password) {
+    public Users(String first_name, String last_name, String birthday, String password) {
         this.first_name = first_name;
         this.last_name = last_name;
-        this.birthday = Birthday;
+        this.birthday = birthday;
         this.password = password;
     }
 
