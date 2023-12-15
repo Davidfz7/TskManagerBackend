@@ -6,7 +6,7 @@ import TskManager.tables.Project;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-@Service
+//se crea el codigo que guarda el poyecto
 @RequiredArgsConstructor
 public class ProjectService {
     private final ProjectRepository projectRepository;
