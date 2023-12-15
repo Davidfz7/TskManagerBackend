@@ -8,6 +8,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+//Se cra la clase para el request del registro
 @Data
 @Builder
 @AllArgsConstructor

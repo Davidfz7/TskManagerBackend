@@ -18,6 +18,8 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+
+//se crean los distintos codigos en uso
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {

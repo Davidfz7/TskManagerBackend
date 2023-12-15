@@ -14,6 +14,8 @@ public class TskManagerApplication {
 		SpringApplication.run(TskManagerApplication.class, args);
 	}
 
+        
+        //
 //	@Bean
 //	public CommandLineRunner commandLineRunner(
 //			AuthenticationService service
